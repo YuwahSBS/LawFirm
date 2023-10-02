@@ -1,0 +1,287 @@
+.page_banner{
+    background-image: url(../../../assets/images/about-banner.png);
+    padding: 0px 0 !important;
+  height: 90vh;
+}
+
+.decoration_wrap{
+    position:absolute;
+    top:50%;
+}
+
+h3{
+    font-size:22px;
+}
+
+.tabs{
+    margin-top:20px;
+    font-size:15px;
+    padding:0px;
+    list-style:none;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+    display:inline-block;
+    border-radius:50px;
+    position:relative;
+  }
+  
+  .tabs a{
+    text-decoration:none;
+    color: #fff;
+    text-transform:uppercase;
+    padding:10px 30px;
+    display:inline-block;
+    position:relative;
+    z-index:1;
+    transition-duration:0.6s;
+    margin-right: 15px;
+    background-color: #ffffff33;
+    cursor:pointer;
+  }
+  
+  .tabs a.active{
+    color:#fff;
+    background-color: #bd9d4f;
+  }
+
+  .tabs a:hover{
+    background-color: #bd9d4f;
+  }
+  
+  .tabs a i{
+    margin-right:5px;
+  }
+  
+  .tabs .selector{
+    height:100%;
+    display:inline-block;
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:1;
+    transition-duration:0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    background: #05abe0;
+    background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+    background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+    background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
+  }
+
+.page_title{
+    color: #bd9d4f !important;
+    font-size: 30px !important;
+    font-weight: normal !important;
+   }
+
+   .law-video {
+    padding: 0px 60px 30px 0px;
+    transition: background .3s, border .3s, border-radius .3s, box-shadow .3s, transform var(--e-transform-transition-duration, .4s);
+
+    img {
+        border-radius: 100px 0px 100px 0px !important;
+        vertical-align: middle;
+        display: inline-block;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+.home-about {
+    color:#fff;
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    p.middle-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.about-law{
+    background-image: url(../../../assets/images/bg-image.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    color:#fff;
+    background-size:contain;
+    
+}
+
+.small-title{
+    font-size:1.2rem;
+}
+
+.elementor-widget-container {
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 20px 0px 0px 0px;
+    background-color: #ffffff33;
+    border-style: unset;
+    border-width: unset;
+    border-color: unset;
+    border-radius: 50px 0px 40px 0px;
+    text-align: center;
+    color: #fff;
+    width:54%;
+
+    .sub-title {
+        color: #B8967E;
+        margin-bottom: 8px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        display: inline-block;
+        position: relative;
+        padding-left: 31px;
+
+        .section-title {
+            padding: 0px 20px 0px 20px;
+            margin-bottom: 28px;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 42px;
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+    }
+}
+
+h4.section-title{
+    font-size:1.1rem;
+}
+
+span.cea-button-text {
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 14px 5px;
+    font-size: 14px;
+    background-color: #6c5c35;
+    border-radius: 15px 0 0 0;
+    color:#fff;
+    border-right: 7px solid #333;
+
+}
+span.cea-button-num {
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 0 0 15px 0;
+    background-color: #bd9d4f;
+}
+
+.section-description {
+    margin: 0 auto;
+    .section-content {
+        color: #777777;
+        margin-bottom: 5px;
+        max-width: 100%;
+    margin: 0 auto;
+    .call-us-team a.cea-button-link {
+        display: inline-block;
+        background-color: #0b162d;
+        color: #fff;
+        border-radius: 15px 0 15px 0;
+        transition: all .3s;
+        box-shadow: none;
+    text-decoration: none;
+    
+    }
+    }
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #302f2f;
+}
+
+.custom-txt{
+    color: #fff;
+    font-size: 13px;
+    padding: 0 20px;
+}
+
+.bg{
+    background-color: #bd9d4fd4;
+    padding: 40px;
+    height:400px;
+}
+
+.why-us-card{
+    padding-right:10px;
+}
+
+.slider{
+    color: #fff;
+    h3{
+        margin-bottom:30px;
+    }
+}
+
+.why-us-card {
+    h3{
+        font-size: 20px;
+        height: 30px;
+    }
+}
+
+.work-post-gal{
+    background-color: #4644449e;
+    border-radius: 50px 0;
+    .snip1192{
+        border-radius: 50px;
+        blockquote{
+            margin-bottom:0;
+            .owl-carousel .owl-item img {
+                display: block;
+                width: 100% !important;
+                object-fit: cover !important;
+                height: 240px !important;
+            }
+        }
+    }
+    .social-media{
+        display: flex;
+    justify-content: center;
+    background-color: #bd9d4f;
+    padding: 8px 0;
+    div{
+        padding: 0 5px;
+        text-align: center;
+        font-size: 13px;
+        i{
+            font-size: 18px !important;
+        }
+    }
+    }
+    .content{
+        padding: 25px;
+    text-align: center;
+    h4{
+        font-size:1.4rem;
+    }
+    }
+}
+
+.owl-carousel .owl-item img {
+    display: block;
+    width: 100% !important;
+    object-fit: cover !important;
+    height: 240px !important;
+}
+
+.law{
+    h3{
+        margin-bottom:20px;
+    }
+    p{
+        margin-bottom:30px;
+    }
+}

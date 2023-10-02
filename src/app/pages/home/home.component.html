@@ -1,0 +1,331 @@
+<div class="home-slider">
+    <div class="container-fluid h-100">
+        <owl-carousel-o [options]="homebanner" id="home_slide">
+            <ng-template carouselSlide>
+                <div class="cover-background" style="background-image: url(../../../assets/images/banner.jpg)">
+                  <div class="container">
+                    <div class="banner-text" data-aos="fade-right" data-aos-duration="1000">
+                    </div>
+                  </div>
+                </div>
+               
+              </ng-template>
+            <ng-template carouselSlide>
+              <div class="cover-background" style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                <div class="container">
+                  <div class="banner-text" data-aos="fade-right" data-aos-duration="1000">
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+
+</div>
+<a (click)="scroll(target2)" class="scroll-indicator d-flex text-center pt-1 page-scroll" id="scroll" style="z-index: 10000; bottom: 9%;cursor:pointer;opacity: 0.5512;position:absolute;justify-content:center;left:50%;">
+    <div class="bounce-arrow anchor bounce"></div>
+</a>
+<!-- <img src="assets/images/cloud-end.png" class="cloud ">
+<img src="assets/images/cloud.png" class="cute-cloud">
+<br><br> -->
+
+<div class="container" style="margin-top:0px;"> 
+    <div class="row">
+        <!-- <div class="col-md-6" data-aos="zoom-out" data-aos-duration="30000"> -->
+            <div class="col-md-6">
+            <div class="law-video"  #target2 >
+                 <img width="596"
+                    height="400"
+                    src="https://wordpress.zozothemes.com/igual/wp-content/uploads/sites/6/2023/07/who-should-earn3.jpg"
+                    class="attachment-full" alt> 
+            </div>
+            <div class="d-flex little-txt">
+                <div class="custom-txt">
+                    <p>All the Lorem Ipsum generators</p>
+                </div>
+                <div >
+                    <img src="assets/images/vertical-line.png" alt="">
+                </div>
+                <div class="custom-txt">
+                    <p>All the Lorem Ipsum generators</p>
+                </div>
+                <div >
+                    <img src="assets/images/vertical-line.png" alt="">
+                </div>
+                <div class="custom-txt">
+                    <p>All the Lorem Ipsum generators</p>
+                </div>
+            </div>
+        </div>
+        <!-- data-aos="zoom-out" data-aos-duration="50000" -->
+        <div class="col-md-6">
+            <div class="home-about">
+                <h3>ABOUT US</h3>
+                <p class="middle-title">We're advocates for Justice and Right</p>
+                <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary, making this the first true generator on net. Uses a dictionary of over always true latin words.</p>    
+                <!-- <button class=" btn btn-primary contact-us mt-4">
+                    <a class="text-decoration-none text-white" href="/careline">Read More
+            
+                    </a></button> -->
+                    <a class="btn custom-link">
+                        Read More
+                        <!-- <div class="elementor-divider"><span class="elementor-divider-separator"></span></div> -->
+                    </a>
+            </div>
+            <div class="elementor-widget-container">
+                <div class="section-title-wrapper call-us-team">
+                    <div class="title-wrap">
+                        <div class="sub-title">
+                            <span class="subtitle-dots">ASK A LAWYER</span>
+                        </div>
+                        <h4 class="section-title">We Provide Solid Law Practice</h4>
+                    </div><!-- .title-wrap -->
+                    <div class="section-description">
+                        <p class="section-content">
+                            <a href="tel:+5284567592" class="cea-button-link">
+                                <span class="cea-button-text">
+                                    <i class="bi bi-telephone-fill me-1"></i> CALL US</span>
+                                    <span class="cea-button-num">+(528) 456-7592</span>
+                                </a>
+                            </p>
+                        </div>
+                        </div></div>
+            </div>
+    </div>
+</div>
+<br><br><br><br><br>
+<div class="container">
+    <h2 class="small-title text-center text-white">WELCOME TO</h2>
+    <h2 class="text-center text-white">Family Law</h2>
+    <br><br>
+    <div class="row justify-content-left about-law d-flex align-items-top">
+        <div class="col-md-4">
+            <img src="assets/images/law2.png" alt="" class="img-fluid aboutlawyer">
+        </div>
+        <div class="col-md-4">
+            <h3>NAME LAWYERS</h3>
+            <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary, making this the first true generator on net.</p>
+            <a class="btn custom-link">
+                Read More
+                <!-- <div class="elementor-divider"><span class="elementor-divider-separator"></span></div> -->
+            </a>
+        </div>
+
+    </div>
+</div>
+<br><br><br><br><br>
+
+<!-- <div class="container">
+    <app-video-slider></app-video-slider>
+</div> -->
+
+<div class="blue-section">
+    <!-- <div class="testimoni-overlay"></div> -->
+    <!-- data-aos="fade-up" -->
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-3 text-white">
+                <h2 class="small-title text-center">OUR LEGAL</h2>
+                <h2 class="text-center">Available Services</h2>
+                <br><br>
+                <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary, making this the first true generator on net.
+                </p>
+                <a class="btn custom-link" style="float:unset;">
+                    Read More
+                    <!-- <div class="elementor-divider"><span class="elementor-divider-separator"></span></div> -->
+                </a>
+            </div>
+            <div class="col-md-9">
+                <section class="slider">
+                    <owl-carousel-o [options]="customOptions" id="service-slider">
+                        <ng-template carouselSlide>
+                            <div class="why-us-card">
+                                <h3>Company Registration</h3>
+                                <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary</p>
+                                <div class="work-post-gal" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    <div class="snip1192">
+                                        <blockquote>
+                                            <!-- <img src="assets/images/Customer01.png"
+                                                alt="reviwe" width="100px"> -->
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="why-us-card">
+                                <h3>Company Registration</h3>
+                                <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary</p>
+                                <div class="work-post-gal" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal1">
+                                    <div class="snip1192">
+                                        <blockquote>
+                                            <!-- <img src="assets/images/Customer02.png"
+                                                alt="reviwe"> -->
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="why-us-card">
+                                <h3>Company Registration</h3>
+                                <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary</p>
+                                <div class="work-post-gal" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal2">
+                                    <div class="snip1192">
+                                        <blockquote>
+                                            <!-- <img src="assets/images/Customer03.png"
+                                                alt="reviwe"> -->
+        
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="why-us-card">
+                                <h3>Company Registration</h3>
+                                <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary</p>
+                                <div class="work-post-gal" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal3">
+                                    <div class="snip1192">
+                                        <blockquote>
+                                            <!-- <img src="assets/images/Customer04.png"
+                                                alt="reviwe"> -->
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <div class="why-us-card">
+                                <h3>Company Registration</h3>
+                                <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary</p>
+                                <div class="work-post-gal" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal4">
+                                    <div class="snip1192">
+                                        <blockquote>
+                                            <!-- <img src="assets/images/Customer05.png"
+                                                alt="reviwe"> -->
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+        
+                    </owl-carousel-o>
+                </section>
+            </div>
+        </div>
+       
+        
+    </div>
+</div>
+<br><br>
+<!-- data-aos="fade-up" data-aos-duration="1500" -->
+<section class="container my-md-5 my-1 care-bg careline-card text-white" >
+    <div class="row align-items-center">
+        <div class="col-md-12">
+            <h2 class="small-title text-center">OUR LEGAL</h2>
+            <h2 class="text-center">WHY CHOOSE US</h2>
+            <br>
+        </div>
+        <div class="col-md-4 col-12 d-flex justify-content-center align-items-center">
+            <!-- <div class="row">
+                <div class="col-md-6">
+                    <div class="phone-section">
+                        <img src="assets/icon/icon-phone.png" width="30px">
+                        <a href="tel:+959 974 151 922">
+                            <p class="phone-text">{{ 'careline.carelinePhone' |
+                                translate }}</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="messenger-section">
+                        <img src="assets/icon/icon-facebook.png" width="30px">
+                        <a
+                            href="https://www.facebook.com/messages/t/116155103153968/">
+                            <p class="text">{{ 'careline.contact' | translate }}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="message-section" [routerLink]="'/careline'">
+                        <img src="assets/icon/icon-messenger.png"
+                            class="message-image">&nbsp;&nbsp;
+                        <span class="text1">{{ 'careline.message' | translate }}</span>
+                    </div>
+                </div>
+            </div> -->
+            <img src="assets/images/chooseus.png" class="img-fluid" width="80%">
+
+        </div>
+        <div class="col-md-8 col-12">
+            <div class="p-md-4 p-2">
+                <h3 class="contact">Best Law Practices</h3>
+                <p class="my-3 foot-banner desc">
+                    All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessaryAll the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary
+                </p>
+                <h3 class="contact">Efficiency & Trust</h3>
+                <p class="my-3 foot-banner desc">
+                    All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessaryAll the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary
+                </p>
+                <h3 class="contact">Results you deserve</h3>
+                <p class="my-3 foot-banner desc">
+                    All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessaryAll the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary
+                </p>
+
+            </div>
+        </div>
+<!--        
+        <img class="doll" src="../../../assets/images/careline-bg.png" alt> -->
+    </div>
+</section>
+<section>
+    <div class="row justify-content-center text-white">
+        <div class="col-md-8 col-12">
+            <div class="row">
+                <div class="col-md-4 col-6">
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <img src="assets/images/client.png" alt="" style="margin-right:15px;">
+                        </div>
+                        <div>
+                            <h3>9200+</h3>
+                            <p>Directory Listed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <img src="assets/images/client.png" alt="" style="margin-right:15px;">
+                        </div>
+                        <div>
+                            <h3>9200+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <img src="assets/images/client.png" alt="" style="margin-right:15px;"s>
+                        </div>
+                        <div>
+                            <h3>9200+</h3>
+                            <p>Win Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br>
+

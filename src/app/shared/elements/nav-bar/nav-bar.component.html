@@ -1,0 +1,120 @@
+
+<div class="nav-sidebar-background" *ngIf="sidebar">
+</div>
+<div class="menu-wrapper" [ngStyle]="{ 'left':sidebar ? '0px' : '-65vh' }">
+    <div class="mobile-menu-container">
+        <!-- <div><button class="mobile-signin-btn primary-btn w-150" *ngIf="!account" (click)="showSigninModal( 'login-modal') ">{{'login.login_t' | translate}}</button></div> -->
+        <div class="w-100" style="text-align: center;">
+            <p [ngClass]="{ 'mobile-active': routeLink == ''}" (click)="navigate('','') ">{{ 'navbar.home' | translate
+                }}
+            </p>
+        </div>
+        <div *ngFor="let menu of menuList" class="w-100" style="text-align: center;">
+            <p [ngClass]="{ 'mobile-active': routeLink == '/' + menu.route}"
+                (click)="navigate( menu.route, menu.parameter)">{{ menu.title | translate }}</p>
+        </div>
+
+        <!-- <div class="language-container" (click)="showLanguage()">
+            <span>
+                <img src="assets/icon/world.png" class="world" />
+
+                <span *ngIf="language == 'en'"> English </span>
+                <span *ngIf="language != 'en'"> မြန်မာ </span>
+                <img src="assets/icon/down.png" class="down">
+            </span>
+            <span class="box-container" id="box-container">
+                <span class="box_">
+                    <p *ngFor="let language of languages" (click)="switchLanguage(language)">
+                      
+                        <span *ngIf="language == 'en'">English</span>
+                        <span *ngIf="language != 'en'">မြန်မာ</span>
+                    </p>
+
+                </span>
+            </span>
+        </div> -->
+    </div>
+</div>
+
+<div class="nav" id="mainNav">
+   
+    <div class="container">
+        <div class="topbar">
+            <div>
+                Mon - Fri 9:00 am - 5:00 pm
+            </div>
+            <div>
+                <p class="mb-1">info@yourdomain.com</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="nav-header">
+            
+                <span class="menu-container " (click)="showSideBar() "><button class="burger-menu "
+                        *ngIf="!routeLink.includes( 'admin') "><i class="fa fa-bars "></i></button></span>
+                <span class="admin-logo-left " *ngIf="routeLink.includes('admin')"></span>
+                <div class="nav-title" (click)="navigate('','') ">
+                    <img src="assets/images/logo-.png" class="logo" id="logo">
+                </div>
+    
+            </div>
+    
+            <div class="nav-links">
+                <div>
+                    <span class="route-links">
+                        <!-- <p [ngClass]="{ 'active': routeLink == ''}" (click)="navigate('','') ">{{ 'navbar.home' | translate
+                            }}
+                        </p> -->
+                        <span *ngFor="let menu of menuList">
+                            <p [ngClass]="{'active': routeLink.includes(menu.route)}" *ngIf="menu.large_show"
+                                (click)="navigate( menu.route, '')">{{
+                                menu.title | translate}}</p>
+                        </span>
+                        
+                      
+                        <span class="social">
+                            <div class="social-media">
+                                <div><i class="fa fa-facebook" aria-hidden="true"></i><br>Facebook</div>
+                                <div><i class="fa fa-instagram" aria-hidden="true"></i><br>Instagram</div>
+                                <div><i class="fa fa-twitter" aria-hidden="true"></i><br>Twitter</div>
+                            </div>
+                        </span>
+    
+    
+                    </span>
+                </div>
+                <!-- <div class=" nav-right "> -->
+                <!-- <div class=" btn-container ">
+                        <button class=" primary-btn w-150 " *ngIf=" !account ">{{'Sign up'}}</button>
+                        <button class=" primary-btn w-150 " *ngIf=" !account ">{{'Sign in'}}</button>
+                    </div> -->
+                <!-- <div class=" language " (click)=" showLanguageMenu() ">
+                        <label class=" selected-language "><i class=" fa fa-globe "></i>&nbsp;&nbsp;{{active_language}} <i
+                                class=" fa fa-chevron-down " aria-hidden=" true "></i></label>
+                        <div class=" language-list " *ngIf=" activeLanguageMenu ">
+                            <ng-container *ngFor=" let language of languages ">
+                                <p (click)=" setLanguage(language) ">{{language.display_name}}</p>
+                            </ng-container>
+                        </div>
+                    </div> -->
+                <!-- <div class=" account " *ngIf=" account ">
+                        <div class=" profile-photo " (click)=" goToAdmin() ">
+                            <img src=" {{userData.ImageUrl}} " />
+                        </div>
+                        <div class=" account-txt ">
+                            Account<i class=" fa fa-chevron-down " aria-hidden=" true "></i>
+                        </div>
+                        <div class=" account-menu ">
+                            <p routerLink=" /admin ">My Account</p>
+                            <p (click)=" logoutAccount() ">Logout</p>
+                        </div>
+                    </div> -->
+                <!-- <div class=" dash-circle ">
+                        <div class=" phone-container "><i class=" fa fa-phone "></i></div>
+                    </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+       
+    </div>
+</div>

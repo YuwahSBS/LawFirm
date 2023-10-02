@@ -1,0 +1,223 @@
+<div class="modal" id="surveyModal" tabindex="-1" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="image-body modal-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/images/survey.jpg"
+                            class="img-fluid full-width-image" alt="...">
+                    </div>
+                    <div class="col-md-8" style="position: relative;">
+                        <div class="contact-one">
+                            <div class="modal-header">
+                                <h4 class="contact modal-title">{{
+                                    'survey-form.survey' | translate }}</h4>
+                                <button type="button" class="btn-close"
+                                    data-bs-dismiss="modal" aria-label="Close"
+                                    (click)="shared_.closeSurvey()"></button>
+                            </div>
+                            <div class="contact-form">
+                                <form action="#" [formGroup]="form"
+                                    (ngSubmit)="onEnquiry()">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group m-0">
+                                                <p class="lbl">{{
+                                                    'survey-form.name' |
+                                                    translate }}<span
+                                                        class="red-star">*</span></p>
+                                                <input autofocus
+                                                    class="form-control"
+                                                    type="text" name="firstname"
+                                                    formControlName="name"
+                                                    [ngClass]="{
+                                                    'is-invalid' : submitted &&
+                                                    f['name'].errors }" required>
+                                                <div *ngIf="submitted &&
+                                                    f['name'].errors"
+                                                    class="invalid-feedback">
+                                                    <div
+                                                        *ngIf="f['name'].errors['required']">{{
+                                                        'survey-form.name-one' |
+                                                        translate }}</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group m-0">
+                                                <p class="lbl">{{
+                                                    'survey-form.phone-number' |
+                                                    translate }} <span
+                                                        class="red-star">*</span></p>
+                                                <input class="form-control"
+                                                    type="tel" name="phone"
+                                                    (keypress)="keyPressNumbers($event)"
+                                                    formControlName="phone_no"
+                                                    [ngClass]="{
+                                                    'is-invalid' : submitted &&
+                                                    f['phone_no'].errors }">
+                                                <div *ngIf="submitted &&
+                                                    f['phone_no'].errors"
+                                                    class="invalid-feedback">
+                                                    <div
+                                                        *ngIf="f['phone_no'].errors['required']">{{
+                                                        'survey-form.phone-one'
+                                                        | translate }}</div>
+                                                    <!-- <div *ngIf="f['phone_no'].errors['pattern']">
+                                                            Invalid phone number format.
+                                                          </div> -->
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mt-2">
+                                            <div class="form-group m-0">
+                                                <p class="lbl">{{
+                                                    'survey-form.type-person' |
+                                                    translate }} <span
+                                                        class="red-star">*</span></p>
+                                                <div class="radio-container">
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="person_by"
+                                                        formControlName="person_by"
+                                                        value="Mother"
+                                                        id="flexRadioDefault1"
+                                                        [ngClass]="{
+                                                        'is-invalid' : submitted &&
+                                                        f['person_by'].errors }"
+                                                        (click)="selectOne($event)">
+                                                    &nbsp;
+                                                    <label class="lbl-1"
+                                                        for="flexRadioDefault1">
+                                                        {{ 'survey-form.Mother'
+                                                        | translate }}
+                                                    </label>&nbsp;
+                                                    <input
+                                                        class="form-check-input"
+                                                        type="radio"
+                                                        name="person_by"
+                                                        formControlName="person_by"
+                                                        id="flexRadioDefault1"
+                                                        value="Child"
+                                                        [ngClass]="{
+                                                            'is-invalid' : submitted &&
+                                                            f['person_by'].errors }"
+                                                        (click)="selectTwo($event)">
+                                                    <label class="lbl-1"
+                                                        for="flexRadioDefault1">
+                                                        &nbsp; {{
+                                                        'survey-form.Baby' |
+                                                        translate }}
+                                                    </label>
+                                                    <div *ngIf="submitted &&
+                                                    f['person_by'].errors"
+                                                        class="invalid-feedback">
+                                                        <div
+                                                            *ngIf="f['person_by'].errors['required']">{{
+                                                            'survey-form.person'
+                                                            | translate }}</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6 mt-2">
+                                            <div class="form-group m-0">
+                                                <p class="lbl">
+                                                    <span *ngIf="labelselected">{{
+                                                        'survey-form.month' |
+                                                        translate
+                                                        }}<span class="red-star">*</span>
+                                                    </span>
+                                                    <span *ngIf="!labelselected">{{
+                                                        'survey-form.Age' |
+                                                        translate
+                                                        }}<span class="red-star">*</span>
+                                                    </span>
+                                                </p>
+
+                                                <input class="form-control"
+                                                    type="text" name="duration"
+                                                    formControlName="duration"
+                                                    [ngClass]="{
+                                                    'is-invalid' : submitted &&
+                                                    f['duration'].errors }"
+                                                    required>
+                                                <div *ngIf="submitted &&
+                                                        f['duration'].errors"
+                                                    class="invalid-feedback">
+                                                    <div
+                                                        *ngIf="f['duration'].errors['required']">{{
+                                                        'survey-form.duration' |
+                                                        translate }}</div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 mt-3">
+                                            <p class="lbl-sec"> <span
+                                                    class="note-text">{{
+                                                    'survey-form.note' |
+                                                    translate
+                                                    }}</span>{{
+                                                'survey-form.note-text' |
+                                                translate }}
+                                            </p>
+                                        </div>
+
+                                        <div class="col-md-12 mt-2">
+                                            <div class="form-group">
+                                                <p class="lbl"> {{
+                                                    'survey-form.Address' |
+                                                    translate }}<span
+                                                        class="red-star">*</span></p>
+                                                <textarea class="form-control"
+                                                    name="message"
+                                                    placeholder=" {{ 'survey-form.message-address' | translate }}"
+                                                    formControlName="address"
+                                                    [ngClass]="{
+                                                        'is-invalid' : submitted &&
+                                                        f['address'].errors }"></textarea>
+                                                <div *ngIf="submitted &&
+                                                        f['address'].errors"
+                                                    class="invalid-feedback">
+                                                    <div
+                                                        *ngIf="f['address'].errors['required']">{{
+                                                        'survey-form.address-survey'
+                                                        | translate }}</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col">
+                                            <button class="message-btn mt-3"
+                                                type="submit"
+                                                [disabled]="loading"
+                                                (click)="sendMessage()">
+                                                <span *ngIf="!loading">{{
+                                                    'survey-form.submit' |
+                                                    translate }}</span>
+                                                <span *ngIf="loading"
+                                                    class="spinner-border spinner-border-sm"></span>
+                                            </button>
+                                        </div>
+                                        <p class="note-agree"><span
+                                                class="red-star">*</span>&nbsp;
+                                            {{ 'survey-form.agree' | translate
+                                            }}</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
